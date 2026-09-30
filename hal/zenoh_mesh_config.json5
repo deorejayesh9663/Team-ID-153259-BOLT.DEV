@@ -1,0 +1,55 @@
+{
+  // Zenoh Router Configuration for VYUHA Swarm
+  // Designed for ROS 2 rmw_zenoh_cpp (Jazzy/Iron)
+  
+  "mode": "peer", // Peer-to-peer mode for decentralized mesh
+  
+  "listen": {
+    "endpoints": [
+      // Listen on TCP port 7447 across all interfaces (Wi-Fi)
+      "tcp/0.0.0.0:7447",
+      // Listen on UDP for multicast discovery
+      "udp/0.0.0.0:7447"
+    ]
+  },
+  
+  "connect": {
+    "endpoints": [
+      // Optional: Hardcode endpoints if UDP multicast is blocked by the warehouse router.
+      // e.g., "tcp/192.168.1.100:7447"
+    ]
+  },
+
+  "scouting": {
+    "multicast": {
+      "enabled": true,
+      // Default Zenoh multicast address
+      "address": "224.0.0.224:7446"
+    }
+  },
+
+  "transport": {
+    "link": {
+      "tx": {
+        // Limit MTU for unstable Wi-Fi environments
+        "mtu": 1400
+      }
+    },
+    "shared_memory": {
+      // Enable Zero-Copy SHM for intra-process nodes (e.g., PIBT Node <-> Nav2 Node)
+      "enabled": true
+    }
+  },
+
+  "plugins": {
+    // Configure REST API for remote debugging
+    "rest": {
+      "http_port": 8000
+    }
+  },
+
+  // Log configuration
+  "log": {
+    "level": "info"
+  }
+}

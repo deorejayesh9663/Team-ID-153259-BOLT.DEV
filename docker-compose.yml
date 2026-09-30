@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  amr_1:
+    build: .
+    environment:
+      - ROBOT_ID=AMR_1
+    network_mode: "host"
+
+  amr_2:
+    build: .
+    environment:
+      - ROBOT_ID=AMR_2
+    network_mode: "host"
+
+  amr_3:
+    build: .
+    environment:
+      - ROBOT_ID=AMR_3
+    network_mode: "host"

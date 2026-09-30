@@ -1,0 +1,31 @@
+{
+  "name": "small_3amr",
+  "cell_size_m": 0.5,
+  "width": 20,
+  "height": 15,
+  "layout": [
+    "DDDD..........DDDD..",
+    "....................",
+    "..RRRR..RRRR..RRRR..",
+    "..RRRR..RRRR..RRRR..",
+    ".......J....J.......",
+    "..RRRR..RRRR..RRRR..",
+    "..RRRR..RRRR..RRRR..",
+    "....................",
+    "..RRRR..RRRR..RRRR..",
+    "..RRRR..RRRR..RRRR..",
+    ".......J....J....C..",
+    "..RRRR..RRRR..RRRRC.",
+    "..................C.",
+    "PPPP..........PPPP..",
+    "PPPP..........PPPP.."
+  ],
+  "legend": {
+    ".": "aisle",
+    "R": "rack",
+    "J": "junction",
+    "P": "pick_station",
+    "D": "dock_door",
+    "C": "charging_bay"
+  }
+}

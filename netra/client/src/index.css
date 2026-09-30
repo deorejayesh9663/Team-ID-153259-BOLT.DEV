@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-netra-bg text-gray-200 antialiased font-mono;
+    margin: 0;
+    overflow: hidden;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-netra-panel/80 backdrop-blur-md border border-gray-700/50 shadow-xl;
+  }
+}

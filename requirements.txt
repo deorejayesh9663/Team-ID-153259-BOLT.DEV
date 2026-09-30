@@ -1,0 +1,36 @@
+# ── Core ──────────────────────────────────────────
+numpy>=1.26
+scipy>=1.12
+networkx>=3.2
+
+# ── Communication ─────────────────────────────────
+eclipse-zenoh>=0.11
+msgpack>=1.0
+
+# ── Edge AI ───────────────────────────────────────
+scikit-learn>=1.4
+torch>=2.2                # training only
+onnx>=1.15
+onnxruntime>=1.17         # inference on edge
+
+# ── Dashboard backend ─────────────────────────────
+fastapi>=0.110
+uvicorn[standard]>=0.27
+websockets>=12.0
+pydantic>=2.6
+
+# ── Analysis ──────────────────────────────────────
+pandas>=2.2
+matplotlib>=3.8
+
+# ── Testing ───────────────────────────────────────
+pytest>=8.0
+pytest-benchmark>=4.0
+pytest-cov>=4.1
+hypothesis>=6.98
+
+# ── Utilities ─────────────────────────────────────
+psutil>=5.9
+rich>=13.7                # pretty CLI output
+typer>=0.9                # CLI framework
+pyyaml>=6.0
